@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="master_main" Codebehind="main.master.cs" %>
+<%@ Register TagPrefix="mb" TagName="menu" Src="~/master/menubar.ascx" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Reiner Tupaz">
+    <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/skel.min.js"></script>
+    <script src="/assets/js/skel-viewport.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="/assets/js/main.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <div id="header-wrapper">
+                <header id="header" class="container">
+                    <div class="row">
+                        <div class="12u">
+
+                            <!-- Logo -->
+                            <h1><a href="/" id="logo">Social Network</a></h1>
+
+                            <!-- Nav -->
+                            <mb:menu ID="menu" runat="server"/>
+                        </div>
+                    </div>
+                </header>
+                <div id="banner">
+                    <asp:ContentPlaceHolder ID="banner" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
+
+            <div id="copyright">
+                Copyright ©<%= DateTime.Now.Year.ToString() %> <a href="#">All rights reserved.</a>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>
