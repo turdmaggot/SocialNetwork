@@ -40,7 +40,8 @@ namespace SocialNetwork.services
                 };
 
                 string strQuery = "INSERT INTO Users (Username, PassHash, FirstName, LastName, Gender, DateOfBirth, CountryID, EmailAdd) ";
-                strQuery += "VALUES(@Username, @PassHash, @FirstName, @LastName, @Gender, @DateOfBirth, @CountryID, @EmailAdd); SELECT SCOPE_IDENTITY()";
+                strQuery += "OUTPUT INSERTED.UserID ";
+                strQuery += "VALUES(@Username, @PassHash, @FirstName, @LastName, @Gender, @DateOfBirth, @CountryID, @EmailAdd)";
 
                 using (SqlConnection con = new SqlConnection(connString))
                 {
@@ -76,6 +77,7 @@ namespace SocialNetwork.services
                         {
                             if (dr.HasRows)
                             {
+                                dr.Read();
                                 user = new User()
                                 {
                                     UserID = dr["UserID"].ToString(),
@@ -120,6 +122,7 @@ namespace SocialNetwork.services
                         {
                             if (dr.HasRows)
                             {
+                                dr.Read();
                                 user = new User()
                                 {
                                     UserID = dr["UserID"].ToString(),
@@ -164,6 +167,7 @@ namespace SocialNetwork.services
                         {
                             if (dr.HasRows)
                             {
+                                dr.Read();
                                 user = new User()
                                 {
                                     UserID = dr["UserID"].ToString(),

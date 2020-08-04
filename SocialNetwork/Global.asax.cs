@@ -25,6 +25,7 @@ namespace SocialNetwork
         {
             routeCollection.MapPageRoute("home page", "home", "~/Default.aspx");
             routeCollection.MapPageRoute("my dashboard", "dashboard", "~/subpages/Dash.aspx");
+            routeCollection.MapPageRoute("reset password", "resetpass", "~/ext/ResetPassword.aspx");
         }
     }
 }

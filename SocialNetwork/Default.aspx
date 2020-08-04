@@ -66,7 +66,7 @@
                                 
                                 <div class="row">
                                     <div class="4u 12u(mobile)">
-                                        <asp:Label ID="lblLoginAlert" runat="server" ForeColor="Red" Text="Your username or password is invalid. Please try again." Visible="False"></asp:Label>
+                                        <asp:Label ID="lblLoginAlert" runat="server" ForeColor="Red"></asp:Label>
                                     </div>
                                 </div>   
                                
@@ -164,14 +164,14 @@
                                 <div class="row">
                                     <div class="8u 10u(mobile)">
                                         <center>
-                                            <asp:Button ID="btnSignup" Width="30%" runat="server" Text="Sign Up" ValidationGroup="reg" />
+                                            <asp:Button ID="btnSignup" Width="30%" runat="server" Text="Sign Up" ValidationGroup="reg" OnClick="btnSignup_Click" />
                                             <ajaxToolkit:ConfirmButtonExtender  runat="server" TargetControlID="btnSignup" ConfirmText="Are you sure your details are correct?"></ajaxToolkit:ConfirmButtonExtender>
                                         </center>
                                     </div>
                                 </div>   
                                 <div class="row">
                                     <div class="8u 12u(mobile)">
-                                        <asp:Label ID="lblRegAlert" runat="server" ForeColor="Red" Visible="False"></asp:Label>
+                                        <asp:Label ID="lblRegAlert" runat="server" ForeColor="Red"></asp:Label>
                                     </div>
                                 </div>   
 
