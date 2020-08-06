@@ -41,6 +41,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
@@ -108,7 +109,6 @@
     <Content Include="assets\js\skel-viewport.min.js" />
     <Content Include="assets\js\skel.min.js" />
     <Content Include="assets\js\util.js" />
-    <Content Include="dbscripts\SocialNetwork.sql" />
     <Content Include="Default.aspx" />
     <Content Include="ext\ResetPassword.aspx" />
     <Content Include="Global.asax" />
